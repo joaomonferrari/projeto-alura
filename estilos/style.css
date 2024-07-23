@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat+Subrayada&family=Montserrat:ital,wght@0,600;1,600&display=swap');
+
+:root{/*Classe de escopo global que vai servir pras cores (p.ex)*/
+    --cor-primaria: black;
+    --cor-secundaria: white;
+    --cor-terciaria: rgb(0, 255, 64);
+    --cor-hover: #f11212;
+    --cor-hover-borda: #ffffff;
+    --cor-azul: purple; 
+
+    --fonte-principal: "Krona One", sans-serif;
+    --fonte-secundaria: "Montserrat", sans-serif;
+}
+
+* { /*Vai configurar todos os elementos*/
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    /*height: 100vh; /*Definimos a altura do viewport (vh), altura da tela do site*/
+    box-sizing: border-box; /*Diminui o conteúdo para se manter no body*/
+    background-color: var(--cor-primaria);
+    color: var(--cor-terciaria);
+}
+
+.cabecalho{
+    padding: 2% 0 0 38%;
+}
+
+.cabecalho__menu{
+    display: flex;
+    gap: 80px;
+}
+
+.cabecalho__menu__link{
+    font-family: var(--fonte-secundaria);
+    font-size: 1,5rem;
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--cor-terciaria);
+}
+
+.apresentacao {
+    padding: 8% 15%; /*Defini a margem lateral do conteudo na tela (SEMPRE), primeiro vertical, segundo horizontal*/
+    display: flex;/*Colocar os itens em linha*/
+    align-items: center;/*Centralizar esses itens*/
+    justify-content: space-between;/*Separa os conteúdos na pagina*/
+    gap: 84px;
+}
+
+.apresentacao__conteudo{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;/*Separa os textos na página (espaçamento)*/
+}
+
+.titulo-destaque { /*Vai usar o seletor classe, específico para um elemento; coloca o . */
+    color: var(--cor-secundaria);
+    background-color: greenyellow;
+    border: 15px var(--cor-azul);
+    font-size: 2,18rem;
+}
+
+.apresentacao__conteudo__titulo{
+    font-size: 1,87rem;
+    font-family: var(--fonte-principal);
+}
+
+.apresentacao__conteudo__subtitulo{
+    font-size: 1,25rem;
+    font-family: var(--fonte-principal);
+}
+
+.apresentacao__conteudo__texto{
+    font-size: 1,06rem;
+    font-family: var(--fonte-secundaria);
+}
+
+.apresentacao__links{
+    display: flex;
+    flex-direction: column;
+    align-items: center;/*Centraliza os links na vertical*/
+    justify-content: space-between;
+    gap: 32px;
+
+}
+
+.apresentacao__links__subtitulo{
+    font-family: var(--fonte-principal);
+    font-weight: 400;
+    font-size: 1,5rem;
+    
+}
+
+/* Ctrl + K + C ==> Atalho de comentário*/
+
+.apresentacao__links__navegacao{
+    /* background-color: #22D4FD; */
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+
+    width: 50%;/*Largura do elemento*/
+    text-align: center;/*Faz o alinahmento do texto*/
+
+    border-radius: 8px;/*Arredondar os cantos do botão*/
+    border: 2px solid cyan; /*Coloca borda de 2px e cor ciano*/
+
+    font-size: 1,5rem;
+    padding-top: 21.5px;/*Distancia do texto a borda de cima (espaçamento interno)*/
+    padding-bottom: 21.5px;/*Distancia do texto a borda de baixo (espaçamento interno)*/
+    text-decoration: none;/*Tira a decoração do texto (No caso o underline)*/
+    color: var(--cor-secundaria);
+    font-family: var(--fonte-secundaria);
+    font-weight: 600; /*Ver o peso no Figma*/
+}
+
+.apresentacao__imagem{
+    width: 50%;
+}
+
+.apresentacao__links__navegacao:hover{ /* Vai colocar um efeito sobre o botao quando o mouse passar em cima */
+    background-color: var(--cor-hover);
+    border: 2px solid var(--cor-hover-borda) ;
+}
+
+.texto-destaque {
+    color: yellow;
+}
+
+.urgente {
+    color: red
+}
+
+.rodape{
+    color: var(--cor-secundaria);
+    background-color: var(--cor-azul);
+    padding: 24px;
+    text-align: center;
+    font-family: var(--fonte-secundaria);
+    font-size: 1,5rem;
+    font-weight: 400;
+}
+
+@media (max-width: 950px){/*Se for até esse tamanho vai sofrer as condições daqui*/
+
+    .cabecalho{
+        padding: 10%;    
+    }
+
+    .cabecalho__menu{
+        justify-content: center;
+    }
+
+    .apresentacao{
+        flex-direction: column-reverse;/*Inverte os dados na pagina*/
+        padding: 5%;
+    }
+
+    .apresentacao__conteudo{
+        width: auto;/*Vai se adaptar ao width do principal/mesmo que aplicar 100%*/
+    }
+}

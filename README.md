@@ -10,6 +10,10 @@
 
 * Flex-box
 
+## 🔗 Você pode acessar meu site no link abaixo:
+
+https://joaomonferrari.github.io/projeto-alura/index.html
+
 ## Feito por:
 
 ### Joao Monferrari
